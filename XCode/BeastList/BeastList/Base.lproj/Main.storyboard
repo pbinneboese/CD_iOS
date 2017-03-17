@@ -22,23 +22,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="062-fp-Xzv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="062-fp-Xzv">
                                 <rect key="frame" x="0.0" y="54" width="375" height="613"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="9Xb-3q-RwG">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Xb-3q-RwG" id="7BQ-oZ-9uX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp6-3c-MMc">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp6-3c-MMc">
                                 <rect key="frame" x="313" y="20" width="43" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iKW-iF-OgL"/>
-                                    <constraint firstAttribute="width" constant="50" id="nqj-sx-z0R"/>
+                                    <constraint firstAttribute="width" constant="43" id="nqj-sx-z0R"/>
                                 </constraints>
                                 <state key="normal" title="Beast"/>
+                                <connections>
+                                    <action selector="beastButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPN-8w-2OW"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bw4-XM-lOI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bw4-XM-lOI">
                                 <rect key="frame" x="0.0" y="20" width="305" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="3Xb-qE-VbM"/>
                                     <constraint firstAttribute="height" constant="30" id="Xpc-vg-duC"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -49,11 +60,20 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bw4-XM-lOI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0SR-R1-1ao"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wp6-3c-MMc" secondAttribute="trailing" id="G3g-a9-xQC"/>
-                            <constraint firstItem="wp6-3c-MMc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="t2J-Xl-NMN"/>
-                            <constraint firstItem="bw4-XM-lOI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="xPF-d1-YEg"/>
+                            <constraint firstItem="062-fp-Xzv" firstAttribute="top" secondItem="wp6-3c-MMc" secondAttribute="bottom" constant="4" id="1CN-7M-589"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wp6-3c-MMc" secondAttribute="trailing" constant="3" id="G3g-a9-xQC"/>
+                            <constraint firstItem="wp6-3c-MMc" firstAttribute="leading" secondItem="bw4-XM-lOI" secondAttribute="trailing" constant="8" id="N71-nw-IbO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="062-fp-Xzv" secondAttribute="bottom" id="TCD-wD-TVE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="062-fp-Xzv" secondAttribute="trailing" constant="-16" id="VMr-zb-H6m"/>
+                            <constraint firstItem="062-fp-Xzv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="npp-GE-Joc"/>
+                            <constraint firstItem="wp6-3c-MMc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="t2J-Xl-NMN"/>
+                            <constraint firstItem="bw4-XM-lOI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xPF-d1-YEg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="062-fp-Xzv" id="m92-gp-fYm"/>
+                        <outlet property="taskTextField" destination="bw4-XM-lOI" id="Dap-9n-2Fv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
