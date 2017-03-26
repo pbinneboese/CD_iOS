@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0CBC4CD901E140EFD2D70F77E1A94E1AEFE8F9A8" : 9223372036854775807,
+    "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "77EA6053-7B40-4811-B479-EF0F5EDDA253",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0CBC4CD901E140EFD2D70F77E1A94E1AEFE8F9A8" : "",
+    "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F" : "iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Project1",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HackingWithSwift\/project1\/Project1.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pbinneboese\/CD_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pbinneboese\/CodingDojo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0CBC4CD901E140EFD2D70F77E1A94E1AEFE8F9A8"
+    }
+  ]
+}

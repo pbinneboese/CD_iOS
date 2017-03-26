@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tfs-HQ-lrA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--1st View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="1st View" id="BYZ-38-t0r" customClass="FirstViewController" customModule="NavBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8L-hQ-7X2">
+                                <rect key="frame" x="127" y="162" width="132" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKa-sC-uPT">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r8L-hQ-7X2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="142" id="MxM-Au-sSB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r8L-hQ-7X2" secondAttribute="trailing" constant="100" id="QfJ-eG-Gd0"/>
+                            <constraint firstItem="r8L-hQ-7X2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="5.5" id="m29-ta-g0a"/>
+                            <constraint firstItem="r8L-hQ-7X2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="111" id="wf7-Qv-Pbt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="1st Tab" id="vxB-3Z-MlC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.2" y="122.78860569715144"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3jT-4e-Ijk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Tfs-HQ-lrA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="sVS-iw-era">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1145590557" green="0.78465017560000005" blue="0.99835759400000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gL1-qz-uTj"/>
+                        <segue destination="4te-eC-2mt" kind="relationship" relationship="viewControllers" id="BFp-D5-S10"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="00e-Dd-gvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
+        </scene>
+        <!--2nd View-->
+        <scene sceneID="P1g-tK-K3T">
+            <objects>
+                <viewController title="2nd View" id="4te-eC-2mt" customClass="SecondViewController" customModule="NavBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gto-CD-X6V"/>
+                        <viewControllerLayoutGuide type="bottom" id="OAo-Ja-EBa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JZZ-iv-0sN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="michelangelo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="92f-20-pOj">
+                                <rect key="frame" x="68" y="125" width="240" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="SB9-gp-LaD"/>
+                                    <constraint firstAttribute="width" constant="240" id="rmL-pu-fBS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="92f-20-pOj" firstAttribute="centerY" secondItem="JZZ-iv-0sN" secondAttribute="centerY" constant="-33.5" id="eTv-0v-fAO"/>
+                            <constraint firstItem="92f-20-pOj" firstAttribute="centerX" secondItem="JZZ-iv-0sN" secondAttribute="centerX" id="s9Z-ox-Fgq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="2nd Tab" id="cCj-gG-2o7"/>
+                    <connections>
+                        <outlet property="imageView" destination="92f-20-pOj" id="hEO-UV-cvH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9n-Fq-raZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="823.53823088455783"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="michelangelo.jpg" width="282" height="360"/>
+    </resources>
+</document>

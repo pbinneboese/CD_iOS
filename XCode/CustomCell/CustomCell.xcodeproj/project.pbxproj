@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		AC4838CA1E7B60870049723E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4838C91E7B60870049723E /* AppDelegate.swift */; };
-		AC4838CC1E7B60870049723E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4838CB1E7B60870049723E /* ViewController.swift */; };
+		AC4838CC1E7B60870049723E /* CustomCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4838CB1E7B60870049723E /* CustomCellsViewController.swift */; };
 		AC4838CF1E7B60870049723E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4838CD1E7B60870049723E /* Main.storyboard */; };
 		AC4838D21E7B60870049723E /* CustomCell.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC4838D01E7B60870049723E /* CustomCell.xcdatamodeld */; };
 		AC4838D41E7B60870049723E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4838D31E7B60870049723E /* Assets.xcassets */; };
 		AC4838D71E7B60870049723E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4838D51E7B60870049723E /* LaunchScreen.storyboard */; };
+		AC4838DF1E7B63F20049723E /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4838DE1E7B63F20049723E /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC4838C61E7B60870049723E /* CustomCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4838C91E7B60870049723E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC4838CB1E7B60870049723E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC4838CB1E7B60870049723E /* CustomCellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellsViewController.swift; sourceTree = "<group>"; };
 		AC4838CE1E7B60870049723E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC4838D11E7B60870049723E /* CustomCell.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomCell.xcdatamodel; sourceTree = "<group>"; };
 		AC4838D31E7B60870049723E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC4838D61E7B60870049723E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC4838D81E7B60870049723E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC4838DE1E7B63F20049723E /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				AC4838C91E7B60870049723E /* AppDelegate.swift */,
-				AC4838CB1E7B60870049723E /* ViewController.swift */,
+				AC4838CB1E7B60870049723E /* CustomCellsViewController.swift */,
 				AC4838CD1E7B60870049723E /* Main.storyboard */,
+				AC4838DE1E7B63F20049723E /* CustomCell.swift */,
 				AC4838D31E7B60870049723E /* Assets.xcassets */,
 				AC4838D51E7B60870049723E /* LaunchScreen.storyboard */,
 				AC4838D81E7B60870049723E /* Info.plist */,
@@ -140,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC4838CC1E7B60870049723E /* ViewController.swift in Sources */,
+				AC4838CC1E7B60870049723E /* CustomCellsViewController.swift in Sources */,
 				AC4838D21E7B60870049723E /* CustomCell.xcdatamodeld in Sources */,
+				AC4838DF1E7B63F20049723E /* CustomCell.swift in Sources */,
 				AC4838CA1E7B60870049723E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
