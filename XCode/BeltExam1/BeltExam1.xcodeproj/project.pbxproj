@@ -16,7 +16,6 @@
 		AC0C3BDE1E85B9860051FD97 /* ToBeastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C3BDD1E85B9860051FD97 /* ToBeastCell.swift */; };
 		AC0C3BE01E85BB340051FD97 /* BeastedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C3BDF1E85BB340051FD97 /* BeastedViewController.swift */; };
 		AC0C3BE41E85BD020051FD97 /* JustBeastItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C3BE31E85BD020051FD97 /* JustBeastItViewController.swift */; };
-		AC3D20091E86EBB4006A8DA9 /* BeastControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D20081E86EBB4006A8DA9 /* BeastControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		AC0C3BDD1E85B9860051FD97 /* ToBeastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToBeastCell.swift; sourceTree = "<group>"; };
 		AC0C3BDF1E85BB340051FD97 /* BeastedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeastedViewController.swift; sourceTree = "<group>"; };
 		AC0C3BE31E85BD020051FD97 /* JustBeastItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustBeastItViewController.swift; sourceTree = "<group>"; };
-		AC3D20081E86EBB4006A8DA9 /* BeastControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeastControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +72,6 @@
 				AC0C3BD41E85A4730051FD97 /* LaunchScreen.storyboard */,
 				AC0C3BD71E85A4730051FD97 /* Info.plist */,
 				AC0C3BCF1E85A4730051FD97 /* BeltExam1.xcdatamodeld */,
-				AC3D20081E86EBB4006A8DA9 /* BeastControllerDelegate.swift */,
 			);
 			path = BeltExam1;
 			sourceTree = "<group>";
@@ -158,7 +155,6 @@
 				AC0C3BE41E85BD020051FD97 /* JustBeastItViewController.swift in Sources */,
 				AC0C3BDE1E85B9860051FD97 /* ToBeastCell.swift in Sources */,
 				AC0C3BC91E85A4730051FD97 /* AppDelegate.swift in Sources */,
-				AC3D20091E86EBB4006A8DA9 /* BeastControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

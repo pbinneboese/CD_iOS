@@ -11,16 +11,18 @@ import CoreData
 
 class ToBeastViewController: UITableViewController, ToBeastCellDelegate {
 
-    var AllBeastItems = [BeastItem]()      // all items from ToBeast and Beasted lists
-    var ToBeastItems = [BeastItem]()      // those on ToBeast list
-    var BeastedItems = [BeastItem]()      // those on Beasted list
+    var ToBeastItems = [BeastItem]()      // items on ToBeast list
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchAllItems()
-        rebuildBeastList()
+        fetchToBeastItems()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        fetchToBeastItems()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,7 +41,7 @@ class ToBeastViewController: UITableViewController, ToBeastCellDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToBeastCell", for: indexPath) as! ToBeastCell
         cell.cellDelegate = self
-        cell.tag = indexPath.row
+        cell.item = ToBeastItems[indexPath.row]
         cell.ItemText.text = ToBeastItems[indexPath.row].item
 //        print("cell \(indexPath.row)")
         return cell
@@ -63,14 +65,15 @@ class ToBeastViewController: UITableViewController, ToBeastCellDelegate {
                 updateItemtoDB(item)
             }
         }
-        rebuildBeastList()
+        fetchToBeastItems()
     }
     
     // press Delete (swipe)
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let item = ToBeastItems[indexPath.row]
+        print("Delete item \(item.item)")
         deleteItemfromDB(item)
-        rebuildBeastList()
+        fetchToBeastItems()
     }
 
     // Tap cell - edit contents
@@ -79,13 +82,12 @@ class ToBeastViewController: UITableViewController, ToBeastCellDelegate {
     }
 
     // Beast Button press - move item to Beasted list
-    func didPressBeastButton(_ tag: Int) {
-        print("Moving item \(tag) to Beasted")
-        let item = ToBeastItems[tag]
+    func didPressBeastButton(_ item: BeastItem) {
+        print("Moving item \(item.item) to Beasted")
         item.beasted = true
         item.beastDate = Date() as NSDate?
         updateItemtoDB(item)
-        rebuildBeastList()
+        fetchToBeastItems()
     }
 
     // segue to JustBeastIt View
@@ -106,38 +108,6 @@ class ToBeastViewController: UITableViewController, ToBeastCellDelegate {
         }
     }
     
-    func rebuildBeastList() {
-        // first, remove all items from ToBeastList and BeastedList
-        ToBeastItems.removeAll()
-        BeastedItems.removeAll()
-        // now, rebuild ToBeastList and BeastedList
-        for i in 0..<AllBeastItems.count {  // place in the appropriate BeastList
-            let item = AllBeastItems[i]
-            if item.beasted == false {
-                ToBeastItems.append(item)
-                print("t1 \(item.item!)")
-            }
-            else {
-                BeastedItems.append(item)
-                print("t2 \(item.item!)")
-            }
-            self.tableView.reloadData()
-        }
-    }
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-
-
     //
     // DATABASE FUNCTIONS
     //
@@ -154,9 +124,6 @@ class ToBeastViewController: UITableViewController, ToBeastCellDelegate {
     func addItemtoDB(_ item: BeastItem) {
         item.beasted = false
         item.beastDate = nil
-        item.itemNumber = Int64(AllBeastItems.count)    // not really used in db
-        AllBeastItems.append(item)
-        
         do {    // save the item into db
             try dbContext.save()
         } catch {
@@ -165,40 +132,36 @@ class ToBeastViewController: UITableViewController, ToBeastCellDelegate {
     }
     
     func updateItemtoDB(_ item: BeastItem) {
-        AllBeastItems[Int(item.itemNumber)] = item
-        do {    // save the item into db
-            try dbContext.save()
-        } catch {
-            print("DB \(error)")
+        if dbContext.hasChanges {
+            do {    // save the item into db
+                try dbContext.save()
+            } catch {
+                print("DB \(error)")
+            }
         }
     }
     
     func deleteItemfromDB(_ item: BeastItem) {
-        let itemNumber = Int(item.itemNumber)
-        dbContext.delete(AllBeastItems[itemNumber])
+        dbContext.delete(item)
         do {
             try dbContext.save()
         } catch {
             print("DB \(error)")
         }
-        AllBeastItems.remove(at: itemNumber)
-        for i in 0..<AllBeastItems.count {  // renumber these
-            AllBeastItems[i].itemNumber = Int64(i)
-        }
     }
     
     
-    func fetchAllItems() {
+    func fetchToBeastItems() {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "BeastItem")
-        do {    // fetch all items from db, place in AllBeastItems[] array
+        request.predicate = NSPredicate(format: "beasted == %@", false as CVarArg)
+
+        do {
             let result = try dbContext.fetch(request)
-            AllBeastItems = result as! [BeastItem]
+            ToBeastItems = result as! [BeastItem]
         } catch {
             print("DB \(error)")
         }
-        for i in 0..<AllBeastItems.count {  // renumber these
-            AllBeastItems[i].itemNumber = Int64(i)
-        }
+        self.tableView.reloadData()
     }
     
 }

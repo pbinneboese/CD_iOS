@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0CBC4CD901E140EFD2D70F77E1A94E1AEFE8F9A8" : 9223372036854775807,
+    "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D927D3A4-73CF-40D2-A1E7-A2BC2CB3D4DB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0CBC4CD901E140EFD2D70F77E1A94E1AEFE8F9A8" : "",
+    "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F" : "iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DojStagram",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XCode\/dojStagram-pb\/DojStagram.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pbinneboese\/CD_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pbinneboese\/CodingDojo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0CBC4CD901E140EFD2D70F77E1A94E1AEFE8F9A8"
+    }
+  ]
+}

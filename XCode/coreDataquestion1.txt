@@ -1,0 +1,5 @@
+Q. From a database moc.save() action, what would trigger a do/try/catch error condition?
+A. Several possibilities:
+  1. failure writing to memory, or database size exceeded
+  2. database not opened properly (NSFetch)
+  3. attributes/values of the record to save do not match the entity description

@@ -10,14 +10,15 @@ import UIKit
 
 class ToBeastCell: UITableViewCell {
     weak var cellDelegate: ToBeastCellDelegate?
+    var item = BeastItem()   // default with a dummy item
 
     @IBAction func BeastButton(_ sender: UIButton) {
-        cellDelegate?.didPressBeastButton(sender.tag)
+        cellDelegate?.didPressBeastButton(self.item)
     }
     @IBOutlet weak var ItemText: UILabel!
     
 }
 
 protocol ToBeastCellDelegate: class {
-    func didPressBeastButton(_ tag: Int)
+    func didPressBeastButton(_ item: BeastItem)
 }
