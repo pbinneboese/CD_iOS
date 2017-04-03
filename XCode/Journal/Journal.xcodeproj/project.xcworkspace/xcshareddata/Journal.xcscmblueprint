@@ -7,14 +7,14 @@
     "0CBC4CD901E140EFD2D70F77E1A94E1AEFE8F9A8" : 9223372036854775807,
     "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "363CC165-4D79-417E-BED0-14CB0091A9B2",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "04371532-C6F4-4529-95F7-615EF0252A4A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "0CBC4CD901E140EFD2D70F77E1A94E1AEFE8F9A8" : "",
     "0180B1F7C90BA771CCCDEFC7F137F0B1D77F0D0F" : "iOS\/"
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "DojStagram-pb",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Journal",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XCode\/dojStagram-pb\/DojStagram-pb.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XCode\/Journal\/Journal.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pbinneboese\/CD_iOS.git",
